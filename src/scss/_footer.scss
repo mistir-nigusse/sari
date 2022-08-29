@@ -1,0 +1,98 @@
+
+.footer {
+  color: white;
+  background: $color7;
+  padding: 2em;
+  font-size: 0.85em;
+  // background-image: url("../images/adimera-footer.png");
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  .row > * {
+    // border: 1px solid green;
+
+    // border: 1px solid red;
+    margin-bottom: 2em;
+    // display: flex;
+    flex-direction: column;
+    margin: 0 5px ;
+    // align-items: center;
+    .col-inner {
+      // border:1px solid purple;
+      width: max-content;
+      margin: auto;
+    }
+    .header {
+      // border: 1px solid green;
+
+      padding: 0.5em 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .content {
+      // border:1px solid red;
+      .social-icons {
+        .icon-item {
+          @include flex;
+          padding: 0.35em 0;
+          align-items: center;
+          cursor: pointer;
+          .icon {
+            margin-right: 0.3em;
+          }
+          &:hover {
+            color: #ddd;
+            // color: $color1;
+          }
+          a {
+    color: white;
+    text-decoration: none;
+}
+        }
+      }
+      .footer-link {
+        margin: 0.1em 0;
+        padding: 0.2em 0;
+        cursor: pointer;
+        &:hover {
+          color: #ddd;
+          // color: $color1;
+        }
+      }
+      .footer-item {
+        margin: 0.1em 0;
+        padding: 0.2em 0;
+      }
+      .payment-icons {
+        .icon {
+          width: 100%;
+        }
+      }
+    }
+    .form-control {
+      padding: 0.4em;
+      width: 300px;
+      border-radius: 0.3em;
+      border: none;
+      color: white;
+      background: #895f40;
+      margin: 0.5em 0;
+    }
+
+    ::placeholder {
+      color: #ffffff;
+      // font-size: 1.1em;
+    }
+    .submit-btn {
+      color: white;
+      float: right;
+    }
+  }
+  .all-right {
+    text-align: right;
+    // border:1px solid red;
+    margin: 1em 0;
+  }
+}

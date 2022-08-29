@@ -1,0 +1,122 @@
+.left-drawer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 350px;
+    z-index: 2500;
+    background: white;
+    animation: 0.25s ease-out 0s 1 slideInFromLeft;
+    display: flex;
+    flex-direction: column;
+    .header {
+      border-bottom: 1px solid #ddd;
+      @include flex;
+      justify-content: space-between;
+      padding: 0.3em;
+
+      .text {
+        padding: 1em;
+        font-weight: bold;
+        color: #666;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .close-drawer {
+        padding: 0.3em;
+        cursor: pointer;
+        transition: transform 0.25s ease-in-out;
+        &:hover {
+          transform: rotate(180deg);
+        }
+      }
+      .icons {
+        @include flex;
+        .icon {
+          position: relative;
+          color: $color6;
+          margin: 0.1em;
+          padding: 0.4em;
+          cursor: pointer;
+          transition: transform 0.13s ease-in-out;
+          .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 1px solid black;
+            padding: 0;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background: black;
+            color: white;
+            font-size: 0.65em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &:hover {
+            color: $color8;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .left-drawer-content {
+        .text {
+        padding: 1em;
+        font-weight: bold;
+        color: #666;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      .categories {
+           .categories {
+        .item {
+          padding: 0.751em;
+          //  border-bottom:1px solid #ddd;
+          color: #666;
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: #666;
+            width: 100%;
+          }
+          &:hover {
+            background: rgb(241, 241, 241);
+          }
+        }
+      }
+      }
+      .footer-links {
+        border-top: 1px solid #ddd;
+        .link-item {
+          padding: 0.751em;
+          //  border-bottom:1px solid #ddd;
+          color: #666;
+          cursor: pointer;
+        }
+      }
+    }
+    .item {
+      padding: 0.751em;
+      //  border-bottom:1px solid #ddd;
+      color: #666;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        color: #666;
+        width: 100%;
+      }
+      &:hover {
+        background: rgb(241, 241, 241);
+      }
+    }
+  }
+
+  .left-drawer-mobile {
+    width: 80%;
+  }

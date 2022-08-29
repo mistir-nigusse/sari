@@ -1,0 +1,50 @@
+.bottom-nav {
+    padding: 0 1em;
+    position: fixed;
+    background: white;
+    box-shadow: 0px -4px 3px rgba(128, 128, 128, 0.507);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 50;
+    .nav-item {
+      font-size: 0.9em;
+
+      display: flex;
+
+      padding: 0.33em 0.3em;
+      color: $color7;
+      flex-direction: column;
+      align-items: center;
+
+      .icon {
+        position: relative;
+        // border:1px solid red;
+        padding: 0.2em;
+        font-size: 1.1em;
+        .badge {
+          position: absolute;
+          top: -2px;
+          right: -5px;
+          border: 1px solid black;
+          padding: 0;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          background: black;
+          color: white;
+          font-size: 0.65em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &:hover {
+        color: $color8;
+        cursor: pointer;
+      }
+    }
+  }

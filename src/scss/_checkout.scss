@@ -1,0 +1,39 @@
+.checkout {
+    width:80%;
+    margin:auto;
+    form {
+        display: flex;
+        flex-direction: column;
+        color: #666;
+        // width:80%;
+        // // margin:auto;
+        .form-grp {
+          display: flex;
+          flex-direction: column;
+          margin-top: 1em;
+          .input {
+            padding: 0.5em 1em;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+
+            &:focus {
+              outline: none;
+              border: 1px solid black;
+              border-radius: 30px;
+            }
+          }
+          .btn {
+            @include addToCartBtn();
+          }
+          .form-error {
+            color: red;
+            margin-top: 0.5em;
+          }
+          .loading {
+            @include flex;
+            justify-content: center;
+            margin-bottom: 0.4em;
+          }
+        }
+      }
+}

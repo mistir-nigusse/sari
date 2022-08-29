@@ -1,0 +1,84 @@
+@mixin flex() {
+    display: flex;
+    align-items: center;
+  }
+  @mixin box() {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 7px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.4rem;
+  }
+  @mixin addToWishlistBtn() {
+    text-transform: uppercase;
+    color: black;
+    border: 2px solid $color7;
+  
+    border-radius: 30px;
+    padding: 0.78em;
+    margin-top: 0.2em;
+    font-size: 0.8em;
+    opacity: 0.9;
+  }
+  @mixin addToCartBtn() {
+    text-transform: uppercase;
+    color: white;
+    background: $color7;
+    margin-top: 2em;
+    border-radius: 30px;
+    padding: 0.8em 1em;
+    margin-top: 1em;
+    font-size: 0.8em;
+    opacity: 0.9;
+    cursor: pointer;
+    &:hover {
+      background: $color8;
+      opacity: 1;
+    }
+  }
+  @mixin hideScrollbar() {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    display: flex;
+    scroll-behavior: smooth;
+  
+    // justify-content: center;
+    &::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0;
+    }
+  }
+  @mixin profileHeaderStyle() {
+    background: $color7;
+    border-radius: 0.4em 0.4em 0 0;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  @mixin modal() {
+    @include box;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80%;
+    overflow-y: auto;
+    min-width: 60%;
+    z-index: 3000;
+    background: white;
+    animation: 0.25s ease-in-out 0s 1 fadeIn;
+    display: flex;
+    flex-direction: column;
+    .header {
+      padding: 1.5em 1.5em 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      .close-modal {
+        transition: transform 0.25s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }

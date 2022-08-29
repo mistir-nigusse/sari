@@ -1,0 +1,37 @@
+.detail-title {
+color: blue;
+}
+
+.productDetail {
+  border-radius: 1%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 5px;
+  .detail-title{
+      color: rgb(183, 42, 56);
+  padding: 0 !important;
+  }
+}
+.productDetail .detail-title {
+  color: rgb(183, 42, 56);
+  padding: 0 !important;
+}
+.productDetail p {
+  margin: 0 !important;
+}
+.product__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10px 0;
+  width: 100%;
+}
+.product__details .detail-title {
+  color: rgb(183, 42, 56);
+  padding: 0 !important;
+}
+
+.prop {
+  color: black;
+}
